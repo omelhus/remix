@@ -44,8 +44,8 @@ export async function parseMultipartFormData(
   }
 
   if (boundary.startsWith('"') && boundary.endsWith('"')) {
-		boundary = boundary.slice(1, -1);
-	}
+    boundary = boundary.slice(1, -1);
+  }
 
   let formData = new FormData();
   let parts: AsyncIterable<UploadHandlerPart & { done?: true }> =
